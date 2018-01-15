@@ -46,3 +46,21 @@ export function loadImage(file, albumId) {
 
   };
 }
+
+export function deleteImage(imageId, albumId) {
+  return dispatch => {
+    let albums = JSON.parse(localStorage.getItem('albums'));
+
+    localStorage.setItem('albums', JSON.stringify(albums.map(item => {
+      if (item.id == albumId) {
+        item.images = item.images.filter(item => {
+          return item.id != imageId;
+        });
+      }
+
+      return item;
+    })));
+
+    dispatch( loadAlbums() );
+  }
+}

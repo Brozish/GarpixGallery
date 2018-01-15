@@ -27,19 +27,19 @@ class ImageList extends React.Component {
 
     return (
       <div>
-        {this.getElems(images)}
+        {this.getElems(images, albumId)}
       </div>
     );
   }
 
-  getElems(images) {
+  getElems(images, albumId) {
     let preparedImages = (
       <p>No images yet</p>
     );
 
     if (images.length) {
       preparedImages = images.map( item => {
-        return <li key = {item.id}><Image image = {item} /></li>;
+        return <li key = {item.id}><Image image = {item} albumId = {albumId} /></li>;
       });
     }
 
