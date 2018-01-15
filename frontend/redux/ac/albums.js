@@ -30,7 +30,7 @@ export function addAlbum(title) {
     let albums = JSON.parse(localStorage.getItem('albums'));
     let id = Date.now().toString(36).substr(2);
 
-    albums.push({ id, title });
+    albums.push({ id, title, images: [] });
     localStorage.setItem('albums', JSON.stringify(albums));
     dispatch( loadAlbums() );
   }

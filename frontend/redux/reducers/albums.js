@@ -1,12 +1,14 @@
 import {
   START, SUCCESS,
-  LOAD_ALBUMS, DELETE_ALBUM
+  LOAD_ALBUMS, DELETE_ALBUM,
+  LOAD_IMAGE
 } from '../../constants';
-import { OrderedMap, Record } from 'immutable';
+import { OrderedMap, Record, Map } from 'immutable';
 
 const AlbumRecord = Record({
   id: null,
-  title: null
+  title: null,
+  images: new Map({})
 });
 
 const defaultStateRecord = Record({
@@ -18,7 +20,7 @@ const defaultStateRecord = Record({
 const defaultState = new defaultStateRecord();
 
 export default (albumsState = defaultState, action) => {
-  const { type, payload } = action;
+  const { type, payload, response } = action;
 
   switch (type) {
     case LOAD_ALBUMS + START:

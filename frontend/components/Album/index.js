@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import ImageList from '../ImageList';
+import AddImageForm from '../AddImageForm';
 import { deleteAlbum } from '../../redux/ac/albums';
 
 class Album extends React.Component {
@@ -25,6 +26,7 @@ class Album extends React.Component {
 
     return (
       <div>
+        <AddImageForm albumId = {album.id} />
         {this.getImages(album.id)}
         <button onClick = {this.handleDelete(album.id)}>
           Delete
