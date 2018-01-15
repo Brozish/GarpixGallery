@@ -5,6 +5,7 @@ import { ConnectedRouter } from 'react-router-redux';
 
 import NotFound from './route/NotFound';
 import AlbumListHandle from './route/AlbumListHandle';
+import './style.css';
 
 export default class App extends React.Component {
   render() {
