@@ -13,10 +13,13 @@
   "author": "brozish",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "normalize.css": "^7.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -34,6 +37,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
     "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   }

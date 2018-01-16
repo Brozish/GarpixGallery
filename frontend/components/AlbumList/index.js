@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Col from 'react-bootstrap/lib/Col';
+import Panel from 'react-bootstrap/lib/Panel';
+import ListGroup from 'react-bootstrap/lib/ListGroup';
+import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 
 import { loadAlbums, addAlbum } from '../../redux/ac/albums';
 import Loader from '../Loader';
@@ -28,12 +32,25 @@ class AlbumList extends React.Component {
     }
 
     return (
-      <div>
-        <ul>
-          {this.getElems(albums)}
-        </ul>
-        <AddAlbumForm />
-      </div>
+      <Panel bsStyle="primary">
+        <Panel.Heading>
+          <Panel.Title componentClass="h3">
+            Albums
+          </Panel.Title>
+        </Panel.Heading>
+        <Panel.Body>
+          <ListGroup>
+            <ListGroupItem>
+              <ul>
+                {this.getElems(albums)}
+              </ul>
+            </ListGroupItem>
+            <ListGroupItem>
+              <AddAlbumForm />
+            </ListGroupItem>
+          </ListGroup>
+        </Panel.Body>
+      </Panel>
     );
   }
 
