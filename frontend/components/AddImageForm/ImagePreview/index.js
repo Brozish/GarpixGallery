@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'react-bootstrap/lib/Image';
 
 export default class ImagePreview extends React.Component {
   static propTypes = {
@@ -14,9 +15,7 @@ export default class ImagePreview extends React.Component {
     }
 
     return (
-      <div>
-        <img src = {imagePreview} />
-      </div>
+      <Image src = {imagePreview} rounded className = "center-block" />
     );
   }
 }
