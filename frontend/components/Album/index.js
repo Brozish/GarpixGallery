@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Panel from 'react-bootstrap/lib/Panel';
+import Button from 'react-bootstrap/lib/Button';
 
 import ImageList from '../ImageList';
-import AddImageForm from '../AddImageForm';
 import { deleteAlbum } from '../../redux/ac/albums';
+import showModal from '../../decorator/showModal';
 
 class Album extends React.Component {
   static propTypes = {
@@ -18,20 +20,31 @@ class Album extends React.Component {
   };
 
   render() {
-    const { album } = this.props;
+    const { album, toggleState } = this.props;
 
     if (!album) {
       return null;
     }
 
     return (
-      <div>
-        <AddImageForm albumId = {album.id} />
-        {this.getImages(album.id)}
-        <button onClick = {this.handleDelete(album.id)}>
-          Delete
-        </button>
-      </div>
+      <Panel bsStyle="primary">
+        <Panel.Heading>
+          <Panel.Title componentClass="h3">
+            {album.title}
+            <Button onClick = {this.handleDelete(album.id)} className = "pull-right" bsSize="xsmall">
+              Delete
+            </Button>
+          </Panel.Title>
+        </Panel.Heading>
+        <Panel.Body>
+          {this.getImages(album.id)}
+        </Panel.Body>
+        <Panel.Footer>
+          <Button onClick = {toggleState}>
+            Upload Image
+          </Button>
+        </Panel.Footer>
+      </Panel>
     );
   }
 
@@ -52,4 +65,4 @@ export default connect((state, ownProps) => {
   return {
     album: state.albums.entities.get(ownProps.albumId)
   };
-}, { deleteAlbum })(Album);
+}, { deleteAlbum })(showModal(Album));

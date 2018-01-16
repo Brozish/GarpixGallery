@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Modal from 'react-bootstrap/lib/Modal';
 
 import { loadImage } from '../../redux/ac/images';
 import ImagePreview from './ImagePreview';
@@ -17,10 +18,10 @@ class AddImageForm extends React.Component {
 
   render() {
     const { file, imagePreview } = this.state;
-    const { albumId } = this.props;
+    const { albumId, isOpen } = this.props;
 
     return (
-      <div>
+      <Modal show = {isOpen}>
         <form onSubmit = {this.handleSubmit(file, albumId)}>
           <div>
             <label>Select Image</label>
@@ -29,7 +30,7 @@ class AddImageForm extends React.Component {
           <button type="submit">Add Image</button>
         </form>
         <ImagePreview imagePreview = {imagePreview} />
-      </div>
+      </Modal>
     );
   }
 
@@ -49,10 +50,9 @@ class AddImageForm extends React.Component {
   }
 
   handleSubmit = (file, albumId) => event => {
-    event.preventDefault();
+    const { loadImage, toggleState } = this.props;
 
-    const { loadImage } = this.props;
-
+    toggleState(event);
     loadImage(file, albumId);
     this.setState(defaultState);
   };

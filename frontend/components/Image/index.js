@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Col from 'react-bootstrap/lib/Col';
+import BsImage from 'react-bootstrap/lib/Image';
+import Button from 'react-bootstrap/lib/Button';
+import Clearfix from 'react-bootstrap/lib/Clearfix';
 
 import { deleteImage } from '../../redux/ac/images';
 
@@ -17,12 +21,13 @@ class Image extends React.Component {
     const { image, albumId } = this.props;
 
     return (
-      <div>
-        <img src = {image.link} />
-        <button onClick = {this.handleDelete(image.id, albumId)}>
+      <Col lg={4} md={4} sm={6} xs={10}>
+        <BsImage src = {image.link} thumbnail className = "center-block" />
+        <Clearfix />
+        <Button onClick = {this.handleDelete(image.id, albumId)} block>
           Delete
-        </button>
-      </div>
+        </Button>
+      </Col>
     );
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Row from 'react-bootstrap/lib/Row';
 
 import Loader from '../Loader';
 import Image from '../Image';
@@ -26,9 +27,9 @@ class ImageList extends React.Component {
     }
 
     return (
-      <div>
+      <Row>
         {this.getElems(images, albumId)}
-      </div>
+      </Row>
     );
   }
 
@@ -39,7 +40,7 @@ class ImageList extends React.Component {
 
     if (images.length) {
       preparedImages = images.map( item => {
-        return <li key = {item.id}><Image image = {item} albumId = {albumId} /></li>;
+        return <Image key = {item.id} image = {item} albumId = {albumId} />;
       });
     }
 
