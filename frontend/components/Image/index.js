@@ -22,7 +22,9 @@ class Image extends React.Component {
 
     return (
       <Col lg={4} md={4} sm={6} xs={10}>
-        <BsImage src = {image.link} thumbnail className = "center-block" />
+        <div className = "img-container">
+          <BsImage src = {image.link} thumbnail />
+        </div>
         <Clearfix />
         <Button onClick = {this.handleDelete(image.id, albumId)} block>
           Delete
