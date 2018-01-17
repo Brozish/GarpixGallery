@@ -11,3 +11,22 @@ img {
   width: 200px;
   height: 150px;
 }
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  cursor: inherit;
+  display: block;
+}
