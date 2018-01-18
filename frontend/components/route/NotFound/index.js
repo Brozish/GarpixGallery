@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 import { connect } from 'react-redux';
 
-import { redirectHome } from '../../../redux/ac/redirect';
+import { redirectHome } from 'Redux/ac/redirect';
 
 class NotFound extends React.Component {
   render() {

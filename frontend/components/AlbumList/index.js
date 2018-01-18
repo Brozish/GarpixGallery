@@ -6,9 +6,9 @@ import Panel from 'react-bootstrap/lib/Panel';
 import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 
-import { loadAlbums, addAlbum } from '../../redux/ac/albums';
-import Loader from '../Loader';
-import AddAlbumForm from '../AddAlbumForm';
+import { loadAlbums, addAlbum } from 'Redux/ac/albums';
+import Loader from 'Components/Loader';
+import AddAlbumForm from 'Components/AddAlbumForm';
 
 class AlbumList extends React.Component {
   static propTypes = {

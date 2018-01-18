@@ -6,7 +6,7 @@ import BsImage from 'react-bootstrap/lib/Image';
 import Button from 'react-bootstrap/lib/Button';
 import Clearfix from 'react-bootstrap/lib/Clearfix';
 
-import { deleteImage } from '../../redux/ac/images';
+import { deleteImage } from 'Redux/ac/images';
 
 class Image extends React.Component {
   static propTypes = {

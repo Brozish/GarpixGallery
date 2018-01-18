@@ -2,7 +2,7 @@ import {
   START, SUCCESS,
   LOAD_ALBUMS, DELETE_ALBUM,
   LOAD_IMAGE
-} from '../../constants';
+} from 'constants';
 import { OrderedMap, Record, Map } from 'immutable';
 
 const AlbumRecord = Record({

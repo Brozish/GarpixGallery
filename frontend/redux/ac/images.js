@@ -2,7 +2,7 @@ import {
   START, SUCCESS, FAIL,
   LOAD_IMAGE,
   CLIENT_ID
-} from '../../constants';
+} from 'constants';
 import { loadAlbums } from './albums';
 
 export function loadImage(file, albumId) {

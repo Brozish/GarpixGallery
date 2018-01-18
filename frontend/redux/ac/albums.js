@@ -1,7 +1,7 @@
 import {
   START, SUCCESS,
   LOAD_ALBUMS, DELETE_ALBUM
-} from '../../constants';
+} from 'constants';
 
 export function loadAlbums() {
   return dispatch => {

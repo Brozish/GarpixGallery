@@ -21,10 +21,11 @@ $ npm run start
 ```
 ## Notes
 
-Remember to change CLIENT_ID in /frontend/constants/index.js
+Remember to change [CLIENT_ID](https://api.imgur.com/oauth2/addclient/) in `frontend/constants/index.js`
 ```js
-export const CLIENT_ID = 'your-client-id-from-imgur.com';
+export const CLIENT_ID = 'your-client-id';
 ```
+
 ## License
 
 MIT

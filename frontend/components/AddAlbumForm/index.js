@@ -10,8 +10,8 @@ import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Row from 'react-bootstrap/lib/Row';
 
-import { addAlbum } from '../../redux/ac/albums';
-import { REQUIRED, MAX_LENGTH, ALBUM_NAME_LENGTH } from '../../constants';
+import { addAlbum } from 'Redux/ac/albums';
+import { REQUIRED, MAX_LENGTH, ALBUM_NAME_LENGTH } from 'constants';
 
 class AddAlbumForm extends React.Component {
   render() {

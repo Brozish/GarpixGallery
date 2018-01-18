@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import Panel from 'react-bootstrap/lib/Panel';
 import Button from 'react-bootstrap/lib/Button';
 
-import ImageList from '../ImageList';
-import { deleteAlbum } from '../../redux/ac/albums';
-import showModal from '../../decorator/showModal';
+import ImageList from 'Components/ImageList';
+import { deleteAlbum } from 'Redux/ac/albums';
+import showModal from 'Decorators/showModal';
 
 class Album extends React.Component {
   static propTypes = {

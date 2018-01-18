@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/lib/Row';
 
-import Loader from '../Loader';
-import Image from '../Image';
+import Loader from 'Components/Loader';
+import Image from 'Components/Image';
 
 class ImageList extends React.Component {
   static propTypes = {

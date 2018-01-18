@@ -6,9 +6,9 @@ import Button from 'react-bootstrap/lib/Button';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 
-import { loadImage } from '../../redux/ac/images';
-import ImagePreview from './ImagePreview';
-import { FILE_SIZE, FILE_SIZE_MAX, TYPE_IMAGE } from '../../constants';
+import { loadImage } from 'Redux/ac/images';
+import ImagePreview from 'Components/ImagePreview';
+import { FILE_SIZE, FILE_SIZE_MAX, TYPE_IMAGE } from 'constants';
 
 class AddImageForm extends React.Component {
   static propTypes = {

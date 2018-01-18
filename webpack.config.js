@@ -39,5 +39,14 @@ module.exports = {
           loader: 'url-loader'
       }
     ]
+  },
+
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'frontend/components'),
+      Redux: path.resolve(__dirname, 'frontend/redux'),
+      Decorators: path.resolve(__dirname, 'frontend/decorators'),
+      constants$: path.resolve(__dirname, 'frontend/constants/index.js')
+    }
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import AlbumList from '../../AlbumList';
-import Album from '../../Album';
+import AlbumList from 'Components/AlbumList';
+import Album from 'Components/Album';
 
 export default class AlbumListHandle extends React.Component {
   render() {
